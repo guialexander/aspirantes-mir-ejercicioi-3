@@ -8,6 +8,271 @@
 </head>
 <body>
     <p>Edita el archivo index.html para hacer algunos cambios y agrega esos cambios al área de preparación con el comando git add index.html. </p>
-    
+    <p>
+        Alexander.Herrera@COLB002 MINGW64 ~
+        $ mkdir S3
+        
+        Alexander.Herrera@COLB002 MINGW64 ~
+        $ cd S3/
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3
+        $ git init
+        Initialized empty Git repository in C:/Users/Alexander.Herrera/S3/.git/
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ touch index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ code .
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git add .
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git add ..
+        fatal: ..: '..' is outside repository at 'C:/Users/Alexander.Herrera/S3'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git add index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git status
+        On branch master
+        
+        No commits yet
+        
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+                new file:   index.html
+        
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git commit -m "crear la rama"
+        [master (root-commit) 98e061f] crear la rama
+         Committer: Alexander Herrera <Alexander.Herrera@almundo.com>
+        Your name and email address were configured automatically based
+        on your username and hostname. Please check that they are accurate.
+        You can suppress this message by setting them explicitly:
+        
+            git config --global user.name "Your Name"
+            git config --global user.email you@example.com
+        
+        After doing this, you may fix the identity used for this commit with:
+        
+            git commit --amend --reset-author
+        
+         1 file changed, 12 insertions(+)
+         create mode 100644 index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git config --global Alex.herrera Alex Herrera
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git config --global alex.guialexander@gmail.com guialexander@gmail.com
+        warning: alex.guialexander@gmail.com has multiple values
+        error: cannot overwrite multiple values with a single value
+               Use a regexp, --add or --replace-all to change alex.guialexander@gmail.com.
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git commit -m "crear la rama"
+        On branch master
+        nothing to commit, working tree clean
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git status
+        On branch master
+        nothing to commit, working tree clean
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log
+        commit 98e061f9106b62f9d7fc7a1d32154f5506a0cf0f (HEAD -> master)
+        Author: Alexander Herrera <Alexander.Herrera@almundo.com>
+        Date:   Fri Mar 3 19:09:11 2023 -0500
+        
+            crear la rama
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git branch
+        * master
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ ls
+        index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git checkout -b develop
+        Switched to a new branch 'develop'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git branch
+        * develop
+          master
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ touch .env
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git status
+        On branch develop
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                .env
+                .gitignore
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git status
+        On branch develop
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                .gitignore
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git add .gitignore
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git status
+        On branch develop
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                new file:   .gitignore
+        
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git add index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git status
+        On branch develop
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                new file:   .gitignore
+                modified:   index.html
+        
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git commit -m "Cambios en la rama develop"
+        [develop ef1f952] Cambios en la rama develop
+         Committer: Alexander Herrera <Alexander.Herrera@almundo.com>
+        Your name and email address were configured automatically based
+        on your username and hostname. Please check that they are accurate.
+        You can suppress this message by setting them explicitly:
+        
+            git config --global user.name "Your Name"
+            git config --global user.email you@example.com
+        
+        After doing this, you may fix the identity used for this commit with:
+        
+            git commit --amend --reset-author
+        
+         2 files changed, 3 insertions(+)
+         create mode 100644 .gitignore
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git status
+        On branch develop
+        nothing to commit, working tree clean
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (develop)
+        $ git checkout master
+        Switched to branch 'master'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git branch
+          develop
+        * master
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git diff index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git diff --staged
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git --online --graph --all
+        unknown option: --online
+        usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+                   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+                   [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+                   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+                   [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+                   <command> [<args>]
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git --online --graph
+        unknown option: --online
+        usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+                   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+                   [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+                   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+                   [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+                   <command> [<args>]
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log --online --graph -- all
+        fatal: unrecognized argument: --online
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log --online --graph --all
+        fatal: unrecognized argument: --online
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log online --graph --all
+        fatal: ambiguous argument 'online': unknown revision or path not in the working tree.
+        Use '--' to separate paths from revisions, like this:
+        'git <command> [<revision>...] -- [<file>...]'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log online
+        fatal: ambiguous argument 'online': unknown revision or path not in the working tree.
+        Use '--' to separate paths from revisions, like this:
+        'git <command> [<revision>...] -- [<file>...]'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log oneline
+        fatal: ambiguous argument 'oneline': unknown revision or path not in the working tree.
+        Use '--' to separate paths from revisions, like this:
+        'git <command> [<revision>...] -- [<file>...]'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log oneline
+        fatal: ambiguous argument 'oneline': unknown revision or path not in the working tree.
+        Use '--' to separate paths from revisions, like this:
+        'git <command> [<revision>...] -- [<file>...]'
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git log
+        commit 98e061f9106b62f9d7fc7a1d32154f5506a0cf0f (HEAD -> master)
+        Author: Alexander Herrera <Alexander.Herrera@almundo.com>
+        Date:   Fri Mar 3 19:09:11 2023 -0500
+        
+            crear la rama
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git merge develop
+        Updating 98e061f..ef1f952
+        Fast-forward
+         .gitignore | 2 ++
+         index.html | 1 +
+         2 files changed, 3 insertions(+)
+         create mode 100644 .gitignore
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git diff index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ git ls-files --other --ignored --exclude-standard
+        .env
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $ ls
+        index.html
+        
+        Alexander.Herrera@COLB002 MINGW64 ~/S3 (master)
+        $
+        </p>
 </body>
 </html>
